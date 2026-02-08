@@ -1,9 +1,7 @@
  Práctica 2 – API REST Carrito
 
-En esta práctica se ha desarrollado una API REST sencilla utilizando Spring Boot.  
+En esta práctica he desarrollado una API REST sencilla utilizando Spring Boot.  
 El objetivo es implementar las operaciones básicas CRUD (Create, Read, Update, Delete) sobre el recurso Carrito, simulando el comportamiento de un carrito de compra.
-
-Cada carrito contiene un único producto, por lo que no existe una lista de líneas de pedido.
 
 # Estructura del carrito
 
