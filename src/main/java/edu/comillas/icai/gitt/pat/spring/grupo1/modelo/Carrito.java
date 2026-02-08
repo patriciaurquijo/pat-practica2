@@ -15,6 +15,10 @@ public class Carrito {
         this.precioFinal = precioFinal;
     }
 
+    public Carrito(){
+
+    }
+
     public int getIdCarrito() {
         return idCarrito;
     }

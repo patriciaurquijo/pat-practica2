@@ -45,20 +45,13 @@ public class CarritoControlador {
         return carrito;
     }
 
+    private String validarCarrito(Carrito carrito) {
+        if (carrito == null) return "Carrito nulo";
+        if (carrito.getIdCarrito() <= 0) return "idCarrito inválido";
+        if (carrito.getIdArticulo() <= 0) return "idArticulo inválido";
+        if (carrito.getDescripcion() == null || carrito.getDescripcion().trim().isEmpty()) return "descripcion vacía";
+        if (carrito.getUnidades() <= 0) return "unidades inválidas";
+        return null;
+    }}
 
-    //@GetMapping("/api/contadores/{nombre}")
-    //public ModeloContador contador(@PathVariable String nombre) {
-    //  return contadores.get(nombre);
-    //}
-
-    //@PutMapping("/api/contadores/{nombre}/incremento/{incremento}")
-    //public ModeloContador incrementa(@PathVariable String nombre,
-    //                                @PathVariable Integer incremento) {
-    //    ModeloContador contadorActual = contadores.get(nombre);
-    //    ModeloContador contadorIncrementado =
-    //            new ModeloContador(nombre, contadorActual.valor() + incremento);
-    //    contadores.put(nombre, contadorIncrementado);
-    //    return contadorIncrementado;
-    //}
-}
 
