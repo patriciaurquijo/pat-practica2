@@ -27,6 +27,24 @@ public class CarritoControlador {
         return carrito;
     } //mapea a un formato JSON las propiedades de carrito
 
+    @GetMapping("/api/carrito/{idCarrito}")
+    public Carrito getCarrito(@PathVariable int idCarrito) {
+      return carritos.get(idCarrito);
+    }
+
+    //borrar un carrito
+    @DeleteMapping("/api/carrito/{idCarrito}")
+    public void borrarCarrito(@PathVariable int idCarrito) {
+        carritos.remove(idCarrito);
+    }
+
+    //Put
+    @PutMapping("/api/carrito/{idCarrito}")
+    public Carrito modificarCarrito(@PathVariable int idCarrito, @RequestBody Carrito carrito){
+        carritos.put(idCarrito, carrito);
+        return carrito;
+    }
+
 
     //@GetMapping("/api/contadores/{nombre}")
     //public ModeloContador contador(@PathVariable String nombre) {
